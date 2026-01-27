@@ -1,7 +1,7 @@
+import * as Clipboard from 'expo-clipboard';
 import { Stack, useRouter } from 'expo-router';
 import { useState } from 'react';
-import { Keyboard, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-
+import { Alert, Keyboard, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function CreatePostScreen() {
   const router = useRouter();
@@ -12,7 +12,7 @@ export default function CreatePostScreen() {
   return (
     <>
       <Stack.Screen options={{ headerShown: false }} />
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <TouchableOpacity onPress={() => router.back()}>
           <Text style={styles.backButton}>← Back</Text>
         </TouchableOpacity>
@@ -57,7 +57,16 @@ export default function CreatePostScreen() {
           style={styles.generateButton}
            onPress={() => {
              Keyboard.dismiss();
-             setGeneratedPost(`Here's a sample post about: ${details}`);
+  
+             let post = '';
+             if (platform === 'instagram' || platform === 'both') {
+              post += `🐴 ${details}\n\nJoin us and be part of something special! ❤️\n\n#therapeuticriding #horses #community #nonprofit\n\n`;
+             }
+             if (platform === 'facebook' || platform === 'both') {
+              post += `We're excited to share some news from our farm!\n\n${details}\n\nWe'd love to see you there. Tag a friend who would enjoy this! 🐎`;
+             }
+  
+             setGeneratedPost(post);
            }}
         >
           <Text style={styles.generateButtonText}>Generate Post ✨</Text>
@@ -67,9 +76,18 @@ export default function CreatePostScreen() {
           <View style={styles.resultContainer}>
             <Text style={styles.resultLabel}>Generated Post:</Text>
             <Text style={styles.resultText}>{generatedPost}</Text>
+            <TouchableOpacity 
+             style={styles.copyButton}
+             onPress={() => {
+              Clipboard.setStringAsync(generatedPost);
+              Alert.alert('Copied!', 'Post copied to clipboard');
+             }}
+           >
+             <Text style={styles.copyButtonText}>Copy to Clipboard</Text>
+           </TouchableOpacity>
           </View>
         )}
-      </View>
+      </ScrollView>
     </>
   );
 }
@@ -79,6 +97,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     paddingTop: 60,
+    paddingBottom: 40,
     backgroundColor: '#ffffff',
   },
   backButton: {
@@ -161,5 +180,18 @@ const styles = StyleSheet.create({
   resultText: {
     fontSize: 16,
     lineHeight: 24,
+  },
+
+  copyButton: {
+  marginTop: 16,
+  padding: 12,
+  backgroundColor: '#28a745',
+  borderRadius: 8,
+  alignItems: 'center',
+  },
+  copyButtonText: {
+  color: '#ffffff',
+  fontSize: 16,
+  fontWeight: '600',
   },
 });

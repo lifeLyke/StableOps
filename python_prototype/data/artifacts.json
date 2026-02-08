@@ -1,0 +1,10 @@
+[
+  {
+    "id": "9af89f60",
+    "kind": "social_post",
+    "content": "[Demo mode — no API key set]\n\nSet OPENAI_API_KEY or ANTHROPIC_API_KEY in your environment (or .env) to get real AI output.\n\nUser request was:\nCreate a social post for our therapeutic riding program with these details:\n\nDetails: I can show you the world\n\nPlatform(s): facebook\n\nReturn only the post text, no preamble. For \"both\", provide one block that works for both Instagram and Facebook, or two clearly separated sections.",
+    "meta": {
+      "platform": "facebook"
+    }
+  }
+]

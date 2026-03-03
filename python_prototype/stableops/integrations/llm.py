@@ -3,6 +3,11 @@
 import os
 from typing import Optional
 
+# Prefer OpenAI if key is set; otherwise Anthropic; otherwise stub
+OPENAI_KEY = os.environ.get("OPENAI_API_KEY")
+ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY")
+
+
 def llm_complete(
     system_prompt: str,
     user_prompt: str,
@@ -13,20 +18,16 @@ def llm_complete(
     """
     Run one completion. Uses OpenAI if OPENAI_API_KEY is set, else Anthropic if set, else stub.
     """
-    # Read from environment at call time so Streamlit reloads reflect changes.
-    openai_key = os.environ.get("OPENAI_API_KEY")
-    anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
-
-    if openai_key:
-        return _openai_complete(openai_key, system_prompt, user_prompt, model=model or "gpt-4o-mini", max_tokens=max_tokens)
-    if anthropic_key:
-        return _anthropic_complete(anthropic_key, system_prompt, user_prompt, model=model or "claude-sonnet-4-20250514", max_tokens=max_tokens)
+    if OPENAI_KEY:
+        return _openai_complete(system_prompt, user_prompt, model=model or "gpt-4o-mini", max_tokens=max_tokens)
+    if ANTHROPIC_KEY:
+        return _anthropic_complete(system_prompt, user_prompt, model=model or "claude-sonnet-4-20250514", max_tokens=max_tokens)
     return _stub_complete(system_prompt, user_prompt)
 
 
-def _openai_complete(api_key: str, system_prompt: str, user_prompt: str, *, model: str, max_tokens: int) -> str:
+def _openai_complete(system_prompt: str, user_prompt: str, *, model: str, max_tokens: int) -> str:
     from openai import OpenAI
-    client = OpenAI(api_key=api_key)
+    client = OpenAI(api_key=OPENAI_KEY)
     r = client.chat.completions.create(
         model=model,
         messages=[
@@ -38,9 +39,9 @@ def _openai_complete(api_key: str, system_prompt: str, user_prompt: str, *, mode
     return (r.choices[0].message.content or "").strip()
 
 
-def _anthropic_complete(api_key: str, system_prompt: str, user_prompt: str, *, model: str, max_tokens: int) -> str:
+def _anthropic_complete(system_prompt: str, user_prompt: str, *, model: str, max_tokens: int) -> str:
     from anthropic import Anthropic
-    client = Anthropic(api_key=api_key)
+    client = Anthropic(api_key=ANTHROPIC_KEY)
     r = client.messages.create(
         model=model,
         max_tokens=max_tokens,

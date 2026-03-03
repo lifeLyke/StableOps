@@ -54,5 +54,45 @@
     "meta": {
       "platform": "facebook"
     }
+  },
+  {
+    "id": "8b81d001",
+    "kind": "social_post",
+    "content": "[Demo mode — no API key set]\n\nSet OPENAI_API_KEY or ANTHROPIC_API_KEY in your environment (or .env) to get real AI output.\n\nUser request was:\nCreate a social post for our therapeutic riding program with these details:\n\nDetails: welcoming new volunteer to the ranch\n\nPlatform(s): facebook\n\nReturn only the post text, no preamble. For \"both\", provide one block that works for both Instagram and Facebook, or two clearly separated sections.",
+    "meta": {
+      "platform": "facebook"
+    }
+  },
+  {
+    "id": "4cec3f2c",
+    "kind": "social_post",
+    "content": "[Demo mode — no API key set]\n\nSet OPENAI_API_KEY or ANTHROPIC_API_KEY in your environment (or .env) to get real AI output.\n\nUser request was:\nCreate a social post for our therapeutic riding program with these details:\n\nDetails: welcoming new volunteer to the ranch\n\nPlatform(s): instagram\n\nReturn only the post text, no preamble. For \"both\", provide one block that works for both Instagram and Facebook, or two clearly separated sections.",
+    "meta": {
+      "platform": "instagram"
+    }
+  },
+  {
+    "id": "592b8fe3",
+    "kind": "social_post",
+    "content": "[Demo mode — no API key set]\n\nSet OPENAI_API_KEY or ANTHROPIC_API_KEY in your environment (or .env) to get real AI output.\n\nUser request was:\nCreate a social post for our therapeutic riding program with these details:\n\nDetails: welcoming new volunteer to the ranch\n\nPlatform(s): both\n\nReturn only the post text, no preamble. For \"both\", provide one block that works for both Instagram and Facebook, or two clearly separated sections.",
+    "meta": {
+      "platform": "both"
+    }
+  },
+  {
+    "id": "d709bf9f",
+    "kind": "social_post",
+    "content": "[Demo mode — no API key set]\n\nSet OPENAI_API_KEY or ANTHROPIC_API_KEY in your environment (or .env) to get real AI output.\n\nUser request was:\nCreate a social post for our therapeutic riding program with these details:\n\nDetails: new volunteer\n\nPlatform(s): instagram\n\nReturn only the post text, no preamble. For \"both\", provide one block that works for both Instagram and Facebook, or two clearly separated sections.",
+    "meta": {
+      "platform": "instagram"
+    }
+  },
+  {
+    "id": "f331db8d",
+    "kind": "social_post",
+    "content": "[Demo mode — no API key set]\n\nSet OPENAI_API_KEY or ANTHROPIC_API_KEY in your environment (or .env) to get real AI output.\n\nUser request was:\nCreate a social post for our therapeutic riding program with these details:\n\nDetails: new volunteer\n\nPlatform(s): instagram\n\nReturn only the post text, no preamble. For \"both\", provide one block that works for both Instagram and Facebook, or two clearly separated sections.",
+    "meta": {
+      "platform": "instagram"
+    }
   }
 ]

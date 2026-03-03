@@ -6,5 +6,53 @@
     "meta": {
       "platform": "facebook"
     }
+  },
+  {
+    "id": "70f8dfb6",
+    "kind": "social_post",
+    "content": "[Demo mode — no API key set]\n\nSet OPENAI_API_KEY or ANTHROPIC_API_KEY in your environment (or .env) to get real AI output.\n\nUser request was:\nCreate a social post for our therapeutic riding program with these details:\n\nDetails: fundraising\n\nPlatform(s): facebook\n\nReturn only the post text, no preamble. For \"both\", provide one block that works for both Instagram and Facebook, or two clearly separated sections.",
+    "meta": {
+      "platform": "facebook"
+    }
+  },
+  {
+    "id": "39930e2a",
+    "kind": "social_post",
+    "content": "[Demo mode — no API key set]\n\nSet OPENAI_API_KEY or ANTHROPIC_API_KEY in your environment (or .env) to get real AI output.\n\nUser request was:\nCreate a social post for our therapeutic riding program with these details:\n\nDetails: spring fundraiser\n\nPlatform(s): instagram\n\nReturn only the post text, no preamble. For \"both\", provide one block that works for both Instagram and Facebook, or two clearly separated sections.",
+    "meta": {
+      "platform": "instagram"
+    }
+  },
+  {
+    "id": "77826286",
+    "kind": "social_post",
+    "content": "🐴 fundraiser this spring\n\nJoin us and be part of something special! ❤️\n\n#therapeuticriding #horses #community #nonprofit",
+    "meta": {
+      "platform": "instagram"
+    }
+  },
+  {
+    "id": "070792c0",
+    "kind": "social_post",
+    "content": "We're excited to share some news from our farm!\n\nspring fundraiser on the ranch that has a gymkhana as the main event\n\nWe'd love to see you there. Tag a friend who would enjoy this! 🐎",
+    "meta": {
+      "platform": "facebook"
+    }
+  },
+  {
+    "id": "4282a641",
+    "kind": "social_post",
+    "content": "We're excited to share some news from our farm!\n\nspring gymkhana fundraiser\n\nWe'd love to see you there. Tag a friend who would enjoy this! 🐎",
+    "meta": {
+      "platform": "facebook"
+    }
+  },
+  {
+    "id": "12437437",
+    "kind": "social_post",
+    "content": "**FACEBOOK:**\n\nThe arena was buzzing with nervous excitement as 8-year-old Maya gripped the reins, her eyes locked on the first barrel ahead. Six months ago, she could barely sit upright in the saddle. Now? She was about to compete in her very first gymkhana event. 🐎\n\nThis spring, we're bringing that same magic to YOU with our annual Gymkhana Fundraiser! Picture this: the thundering of hooves, riders of all abilities weaving through barrels and poles, families cheering from the sidelines, and the pure joy on every participant's face as they cross that finish line. It's not just about the competition — it's about celebrating how far each of our riders has come on their journey.\n\nBut here's the thing: events like these don't happen without incredible community support. The entry fees, ribbons, refreshments, and special adaptive equipment all add up. That's where you come in. Whether you're a seasoned rider looking to show off your skills, a family wanting to cheer on our amazing participants, or someone who simply believes in the power of horses to change lives — we need you there.\n\nMark your calendars and watch for registration details coming soon! Can't participate but still want to help? Consider sponsoring a rider or making a donation to ensure every child and adult who wants to compete can do so, regardless of their financial situation. ✨\n\nWho's ready to saddle up for an unforgettable day of community, competition, and pure horse magic? Drop a 🤠 in the comments if you're in!\n\n#therapeuticriding #gymkhana #equinetherapy #horses #community #fundraiser #adaptivesports #horsepower",
+    "meta": {
+      "platform": "facebook"
+    }
   }
 ]

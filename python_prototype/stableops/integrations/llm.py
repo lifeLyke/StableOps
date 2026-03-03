@@ -21,7 +21,7 @@ def llm_complete(
     if OPENAI_KEY:
         return _openai_complete(system_prompt, user_prompt, model=model or "gpt-4o-mini", max_tokens=max_tokens)
     if ANTHROPIC_KEY:
-        return _anthropic_complete(system_prompt, user_prompt, model=model or "claude-3-haiku-20240307", max_tokens=max_tokens)
+        return _anthropic_complete(system_prompt, user_prompt, model=model or "claude-sonnet-4-20250514", max_tokens=max_tokens)
     return _stub_complete(system_prompt, user_prompt)
 
 

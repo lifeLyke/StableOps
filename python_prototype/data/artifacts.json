@@ -6,5 +6,21 @@
     "meta": {
       "platform": "facebook"
     }
+  },
+  {
+    "id": "cbaf8202",
+    "kind": "social_post",
+    "content": "[Demo mode — no API key set]\n\nSet OPENAI_API_KEY or ANTHROPIC_API_KEY in your environment (or .env) to get real AI output.\n\nUser request was:\nCreate a social post for our therapeutic riding program with these details:\n\nDetails: fall\n\nPlatform(s): instagram\n\nReturn only the post text, no preamble. For \"both\", provide one block that works for both Instagram and Facebook, or two clearly separated sections.",
+    "meta": {
+      "platform": "instagram"
+    }
+  },
+  {
+    "id": "6a8a1b4e",
+    "kind": "social_post",
+    "content": "[Demo mode — no API key set]\n\nSet OPENAI_API_KEY or ANTHROPIC_API_KEY in your environment (or .env) to get real AI output.\n\nUser request was:\nCreate a social post for our therapeutic riding program with these details:\n\nDetails: Fall festival\n\nPlatform(s): instagram\n\nReturn only the post text, no preamble. For \"both\", provide one block that works for both Instagram and Facebook, or two clearly separated sections.",
+    "meta": {
+      "platform": "instagram"
+    }
   }
 ]

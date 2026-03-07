@@ -18,11 +18,21 @@ try:
 except ImportError:
     pass
 
+import logging
 import streamlit as st
 
-from stableops.workflows import run_create_social_post, run_create_newsletter, run_draft_grant_proposal
-from stableops.schemas import CreatePostInput, SocialPlatform, CreateNewsletterInput, DraftGrantInput
-from stableops.integrations.storage import save_artifact
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+)
+
+from workflows import run_create_social_post, run_create_newsletter, run_draft_grant_proposal
+from schemas import CreatePostInput, SocialPlatform, CreateNewsletterInput, DraftGrantInput
+from integrations.storage import save_artifact
+from config import OPENAI_API_KEY, ANTHROPIC_API_KEY
+
+if not OPENAI_API_KEY and not ANTHROPIC_API_KEY:
+    logging.getLogger(__name__).info("No OPENAI_API_KEY or ANTHROPIC_API_KEY set; LLM features will use stub/demo output")
 
 st.set_page_config(page_title="StableOps", page_icon="🐴", layout="centered")
 st.title("🐴 StableOps")
